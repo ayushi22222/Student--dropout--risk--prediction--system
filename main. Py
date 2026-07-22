@@ -1,3 +1,4 @@
+from database import add_student
 def calculate_risk(attendance, marks, assignment, behavior, fee_pending, counseling):
 
     risk = 0
@@ -41,8 +42,7 @@ behavior = input("Behavior (Good/bad): ")
 fee_pending = input("Fee Pending (Yes/No): ")
 counseling = input("Counseling Required (Yes/No): ")
 
- risk = calculate_risk(attendance, marks, assignment, behavior, fee_pending, counseling)
-from database import add_student
+ risk = calculate_risk(attendance, marks, assignment, behavior, fee_pending, counseling) 
 
 print("\n------ Result ------")
 print("Student Name :", name)
