@@ -41,11 +41,23 @@ behavior = input("Behavior (Good/bad): ")
 fee_pending = input("Fee Pending (Yes/No): ")
 counseling = input("Counseling Required (Yes/No): ")
 
-risk = calculate_risk(attendance, marks, assignment, behavior, fee_pending, counseling)
+ risk = calculate_risk(attendance, marks, assignment, behavior, fee_pending, counseling)
+from database import add_student
 
 print("\n------ Result ------")
 print("Student Name :", name)
-print("Risk Score :", risk)
+print("Risk Score :", risk)  
+
+add_student(
+    name,
+    attendance,
+    marks,
+    assignment,
+    fee_pending,
+    score,
+    level
+)
+print("Student data saved successfully") 
 
 if risk <= 30:
     print("Risk Level : LOW")
