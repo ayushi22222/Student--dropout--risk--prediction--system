@@ -1,37 +1,30 @@
-from database import add_student
 def calculate_risk(attendance, marks, assignment, behavior, fee_pending, counseling):
-
     risk = 0
 
-    # Attendance
     if attendance < 60:
         risk += 30
     elif attendance < 75:
         risk += 15
 
-    # Marks
     if marks < 40:
         risk += 25
     elif marks < 60:
         risk += 10
 
-    # Assignment
     if assignment.lower() == "no":
         risk += 15
 
-    # Behavior
     if behavior.lower() == "poor":
         risk += 10
 
-    # Pending Fee 
     if fee_pending.lower() == "yes":
         risk += 10
 
-    # Counseling
     if counseling.lower() == "yes":
-        risk += 10 
+        risk += 10
 
-    return risk 
+    return risk
+
 
 print("===== Student Dropout Risk Prediction System =====")
 
@@ -39,33 +32,22 @@ name = input("Enter Student Name: ")
 attendance = float(input("Attendance Percentage: "))
 marks = float(input("Average Marks: "))
 assignment = input("Assignment Submitted (Yes/No): ")
-behavior = input("Behavior (Good/bad): ")
+behavior = input("Behavior (Good/Poor): ")
 fee_pending = input("Fee Pending (Yes/No): ")
 counseling = input("Counseling Required (Yes/No): ")
 
-risk = calculate_risk(attendance, marks, assignment, behavior, fee_pending, counseling) 
+risk = calculate_risk(attendance, marks, assignment, behavior, fee_pending, counseling)
 
 print("\n------ Result ------")
-print("Student Name :", name)
-print("Risk Score :", risk)  
-
-add_student(
-    name,
-    attendance,
-    marks,
-    assignment,
-    fee_pending,
-    score,
-    level
-)
-print("Student data saved successfully") 
-score= risk 
+print("Student Name:", name)
+print("Risk Score:", risk)
 
 if risk <= 30:
-    print("Risk Level : LOW")
+    level = "LOW"
 elif risk <= 60:
-    print("Risk Level : MEDIUM")
+    level = "MEDIUM"
 else:
-    print("Risk Level : HIGH")
+    level = "HIGH"
 
-print("-----  -")
+print("Risk Level:", level)
+print("Project Completed Successfully")
