@@ -6,13 +6,13 @@ def calculate_risk(attendance, marks, assignment, behavior, fee_pending, counsel
     # Attendance
     if attendance < 60:
         risk += 30
-    elseif attendance < 75:
+    elif attendance < 75:
         risk += 15
 
     # Marks
     if marks < 40:
         risk += 25
-    elseif marks < 60:
+    elif marks < 60:
         risk += 10
 
     # Assignment
@@ -61,7 +61,7 @@ print("Student data saved successfully")
 
 if risk <= 30:
     print("Risk Level : LOW")
-elseif risk <= 60:
+elif risk <= 60:
     print("Risk Level : MEDIUM")
 else:
     print("Risk Level : HIGH")
