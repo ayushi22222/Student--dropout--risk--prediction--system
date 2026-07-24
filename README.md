@@ -1,2 +1,16 @@
-# Student--dropout--risk--prediction--system
-Python project to predict students at risk of dropout using attendance, marks, fees, behavior, assignment submitted and counseling data.
+# Student Dropout Risk Prediction System
+
+# Description
+This project predicts the dropout risk of students based on attendance, marks, assignment submission, behavior, fee status, and counseling requirement.
+
+# Technologies
+- Python 3
+
+# Features
+- Calculates Risk Score
+- Displays Risk Level (Low, Medium, High)
+- Easy to use
+- most useful 
+
+## Run 
+python main. py
